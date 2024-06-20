@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+body {
+  background: rgb(37, 37, 85);
+  background-image: url(../images/milkyway.jpg);
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+
+  padding: 8px 0px;
+  // margin-bottom: 20px;
+
+  border: 0;
+  box-shadow: -2px 4px 2px rgba(0, 0, 0, 0.2);
+
+  background: rgba(0, 0, 0, 0.45);
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0px 10px;
+
+    width: 100%;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      // 文字 logo
+      .logo {
+        a {
+          display: flex;
+          align-items: center;
+
+          font-family: "Montserrat", helvetica, "Jersey 25", sans-serif;
+          font-size: 36px;
+          font-weight: bold;
+
+          line-height: 100%;
+
+          span {
+            background: linear-gradient(to right, #b8dbff, #3f2c70);
+            background-clip: text;
+            color: transparent;
+          }
+        }
+      }
+
+      // 選單
+      .custom-select {
+        display: flex;
+        align-items: center;
+
+        // 定義下拉方塊內部的選擇框
+        select {
+          padding: 5px;
+
+          // width: 200px;
+          width: 225px;
+
+          font-size: 18px;
+
+          border: 0px;
+          outline: none;
+
+          color: antiquewhite;
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+main {
+  position: relative;
+  overflow: hidden;
+  height: 93.1vh;
+  margin: 30px 0px;
+  padding: 0px 20px;
+  .clock {
+    width: 150px;
+    height: 150px;
+    // background: rgb(248, 213, 59);
+    // background: url(/clockImg.png) no-repeat;
+
+    border-radius: 50%;
+    // position: relative;
+    position: absolute;
+    user-select: none;
+    .clockImg {
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      width: 156px;
+      transform: rotate(134deg);
+      opacity: 0.5;
+    }
+    img {
+      transform: rotate(134deg);
+    }
+
+    .hour {
+      width: 23%;
+      height: 3px;
+      background: rgb(140, 140, 115);
+      position: absolute;
+      left: 27%;
+      top: calc(50% - 1.5px);
+      border-radius: 5px;
+      transform-origin: right center;
+    }
+    .minute {
+      width: 41.5%;
+      height: 4px;
+      background: rgb(91, 96, 64);
+      position: absolute;
+      left: 8.5%;
+      top: calc(50% - 2px);
+      border-radius: 5px;
+      transform-origin: right center;
+    }
+    .second {
+      width: 47%;
+      height: 2px;
+      background: rgb(159, 49, 42);
+      position: absolute;
+      left: 3%;
+      top: calc(50% - 1px);
+      border-radius: 5px;
+      transform-origin: right center;
+    }
+  }
+
+  // #world-clock {
+  //   // display: none;
+  // }
+  .mapWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    .world-map {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 80%;
+
+      // img {
+      //   width: 85%;
+      // }
+    }
+  }
+}
+
+#text {
+  color: white;
+}
+#world-clock {
+  color: white;
+}
+path:hover {
+  cursor: pointer;
+  background: red;
+}

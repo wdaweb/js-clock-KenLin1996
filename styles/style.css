@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background: rgb(37, 37, 85);
+  background-image: url(../images/milkyway.jpg);
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+  padding: 8px 0px;
+  border: 0;
+  box-shadow: -2px 4px 2px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.45);
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+  width: 100%;
+}
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+nav ul li .logo a {
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat", helvetica, "Jersey 25", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 100%;
+}
+nav ul li .logo a span {
+  background: linear-gradient(to right, #b8dbff, #3f2c70);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+nav ul li .custom-select {
+  display: flex;
+  align-items: center;
+}
+nav ul li .custom-select select {
+  padding: 5px;
+  width: 225px;
+  font-size: 18px;
+  border: 0px;
+  outline: none;
+  color: antiquewhite;
+  background: transparent;
+}
+
+main {
+  position: relative;
+  overflow: hidden;
+  height: 93.1vh;
+  margin: 30px 0px;
+  padding: 0px 20px;
+}
+main .clock {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+main .clock .clockImg {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 156px;
+  transform: rotate(134deg);
+  opacity: 0.5;
+}
+main .clock img {
+  transform: rotate(134deg);
+}
+main .clock .hour {
+  width: 23%;
+  height: 3px;
+  background: rgb(140, 140, 115);
+  position: absolute;
+  left: 27%;
+  top: calc(50% - 1.5px);
+  border-radius: 5px;
+  transform-origin: right center;
+}
+main .clock .minute {
+  width: 41.5%;
+  height: 4px;
+  background: rgb(91, 96, 64);
+  position: absolute;
+  left: 8.5%;
+  top: calc(50% - 2px);
+  border-radius: 5px;
+  transform-origin: right center;
+}
+main .clock .second {
+  width: 47%;
+  height: 2px;
+  background: rgb(159, 49, 42);
+  position: absolute;
+  left: 3%;
+  top: calc(50% - 1px);
+  border-radius: 5px;
+  transform-origin: right center;
+}
+main .mapWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+main .mapWrapper .world-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+}
+
+#text {
+  color: white;
+}
+
+#world-clock {
+  color: white;
+}
+
+path:hover {
+  cursor: pointer;
+  background: red;
+}/*# sourceMappingURL=style.css.map */

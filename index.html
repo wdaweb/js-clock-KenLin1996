@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 網頁 icon -->
+    <link rel="icon" href="./images/favicon.png" />
+    <title>World Clock</title>
+
+    <!-- 外部 css  -->
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <!-- 字體一 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 字體二 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 引入 jsvectormap 套件 來顯示地圖-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <div class="logo">
+              <a href="/"><span>World Clock</span></a>
+            </div>
+          </li>
+          <li>
+            <span style="color: antiquewhite">Taiwan:&nbsp;</span>
+            <p id="text"></p>
+            <span style="color: #fff">&nbsp;&#47;&nbsp;</span>
+            <div id="world-clock"></div>
+          </li>
+          <li>
+            <div class="custom-select">
+              <select id="timezone-select"></select>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main style="background-color: rgba(255, 255, 255, 0.02)">
+      <div class="clock">
+        <img class="clockImg" src="./images/clockImg.png" alt="" />
+        <div class="hour"></div>
+        <div class="minute"></div>
+        <div class="second"></div>
+      </div>
+
+      <!-- <div style="text-align: center; transform: rotate(135deg)"></div> -->
+      <div id="world-clock"></div>
+      <div class="mapWrapper">
+        <div class="world-map markerLabelStyle"></div>
+      </div>
+    </main>
+
+    <!-- 處理日期 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <!-- 處理時區 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data-10-year-range.min.js"></script>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
